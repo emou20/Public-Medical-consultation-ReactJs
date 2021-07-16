@@ -1,38 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;700&display=swap');
+
+button:focus {
+  outline:0 !important;
+}
+body {
+  font-family: 'Advent Pro', sans-serif !important;
+}
 .App {
+  background: #f0f2f5;
+}
+.header1 {
+  height: 70px;
+}
+.header2 {
+ /* height: 35px;
+     background-color: #fbfbfb; */
+    width: 100%;
+    border-top: 1px #eee solid;
+    border-bottom: 1px #eee solid;
+}
+
+.logoApp {
+  width: 10%;
+  float: left;
+  height: 40px;
+  margin-top: 15px;
+}
+.bttLogin {
+  float: right;
+  padding: 5px 15px;
+  text-align: center;
+  display: block;
+  color: #336cfb;
+  border: 2px rgba(51, 108, 251, 0.79) solid;
+  border-radius: 20px;
+  height: 40px;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: all 0.5s;
+  margin-left: 5px;
+}
+.bttLogin:hover {
+  border: 2px rgba(204, 204, 204, 0.79) solid;
+  text-decoration: none;
+}
+.menuContainer {
+  height: 40px;
+}
+
+.menuContainer ul{
+  list-style: none;
+  padding:3px 0px;
+}
+.menuContainer ul li{
+  display: inline;
+  margin: 2px 15px;
+  position: relative;
+  height: 25px;
+  float: left;
+
+}
+.menuContainer ul li a{
+  color: #1f2022;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+
+}
+.menuContainer ul li button{
+  color: #1f2022;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  background: none;
+  border: none;
+
+}
+
+.menuContainer ul li ul{
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  min-width: 300px;
+  -webkit-box-shadow: 0px 2px 3px -1px rgba(128,128,128,1);
+  -moz-box-shadow: 0px 2px 3px -1px rgba(128,128,128,1);
+  box-shadow: 0px 2px 3px -1px rgba(128,128,128,1);
+  z-index: 9999;
+
+}
+
+.menuContainer ul li ul li{
+  display: none;
+  min-width: 150px;
+
+}
+
+.menuContainer ul li:hover ul{
+  display: block;
+
+}
+.menuContainer ul li:hover ul li{
+  display: block;
+
+}
+
+.menuContainer ul li ul li:hover{
+  display: block;
+
+}
+.mainGlobale {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+.GrapheHome {
+  width: 300px;
+  height: 210px;
+  margin: 41px auto 0 auto;
+  background-image: url(img/consultIcn02-2.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.titreSloganHome {
+  text-align: center;
+  font-size: 38px;
+}
+.categSearch, .nameSearch {
+  width: 47%;
+  float: left;
+
+}
+.bttSearch {
+  width: 6%;
+  float: right;
+}
+.categSearch .MuiAutocomplete-root, .nameSearch .MuiFormControl-root{
+  width: 98% !important;
+
+}
+.contRechercheHome {
+  padding-top: 20px;
+}
+.ulTopCategMed {
+  list-style: none;
+  padding: 0;
+}
+.ulTopCategMed li{
+  list-style: none;
+  margin-top: 5px;
+}
+.ulTopCategMed li a{
+  color:#1f2022;
+  text-decoration: none;
+  font-size: 13px;
+
+}
+.contRechercheHome {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.footerGlobale {
+  background-color: #fff;
+  padding-top:25px;
+  padding-bottom:25px;
+  margin-top: 25px;
+  border-top: 1px rgba(197, 197, 197, 0.685) solid;
+
+}
+.footerBas {
+  width: 100%;
+  height: 30px;
+  font-size: 13px;
+  color: #1f2022;
+}
+
+.contPhotoMedecin {
+  float: left;
+  width: 10%;
+  height: auto;
+}
+.contPhotoMedecin img{
+  width: 100%;
+  height: auto;
+}
+
+
+.pagination {
+  width: 100%;
+  float: left;
+  margin: 15px 0px;
+}
+.pagination li{
+  display: inline;
+}
+
+.pagination li button{
+  width: auto;
+  height: 35px;
+  border: 1px #eee solid;
+  display: block;
+  margin: 0 5px;
+  padding:5px 10px;
+  cursor: pointer;
+}
+.pagination li.active button{
+  background-color: black;
+  color: #eee;
+}
+.contBoxMedecinListe {
+  float: left;
+  width: 100%;
+  padding: 15px;
+}
+
+.resteBoxMedecin {
+  width: 88%;
+  float: left;
+  margin-left: 2%;
+}
+.nomDoc {
+  width: 100%;
+  float: left;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.prenomDoc {
+  width: 100%;
+  float: left;
+  font-size: 19px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px #eee solid;
+}
+
+.bttDemandeConsultation {
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #2b5de0;
+  display: block;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 15px;
+  float: left;
+  transition: all 0.5s;
+}
+.bttDemandeConsultation:hover {
+  color: #000;
+  text-decoration: none;
+}
+.bttDemandeConsultHome {
+  float: right;
+  display: block;
+}
+.contPaperLogin {
+  width: 100%;
+  height: auto;
+}
+.contFormLogin {
+  padding: 25px;
+  background-color: #fff;
+
+
+}
+.contFormLoginGlobale {
+  padding: 25px;
+  display: block;
+  overflow: hidden;
+  background-image: url(img/bgboxlogin.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 430px;
+
+}
+.ligneLogin {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.MuiFormControl-root {
+  width: 100%;
+}
+.contBttForm {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+.leftPartLogin {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.rightPartLogin {
+  float: right;
+  width: 50%;
+  height: auto;
+}
+
+.leftcolInscri {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.MuiPaper-root {
+  display: block;
+  overflow: hidden;
+}
+
+.rightcolInscri {
+  float: right;
+  width: 45%;
+  height: 810px;
+  background-image: url(img/medical-appointment-doctor-healthcare-40568.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.groupeAnti {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.userNameConnected {
+  float: right;
+    display: block;
+    margin-right: 10px;
+    padding: 22px 15px;
+    font-size: 18px;
+    position: relative;
+}
+.userNameConnected span{
+  color: #336cfb;
+}
+#component-error-text {
+  color: red;
+}
+.ligneCalender {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+  overflow: hidden;
+}
+.joursDate {
+  width: 100%;
+  font-size: 18px;
+
+}
+
+.heureReservation {
+  width: 12.5%;
+  float: left;
+  margin: 0 3px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  background-color: aquamarine;
+}
+.ligneInputTxt {
+  margin: 10px 0px;
+  float: left;
+  width: 100%;
+}
+.editBtt {
+  float: right;
+  margin-left: 15px !important;
+}
+.cardHeaderProfil {
+  margin-bottom: 15px;
+}
+.contIconProfil {
+  flex: auto;
+  flex-direction: column;
+  float: right;
+}
+.cardmenuMedecin .contIconProfil button {
+  width: 100%;
+  justify-content: left;
+}
+.contIconProfil button {
+  border-left: 1px #eee solid;
+}
+.contIconProfil button span{
+  margin-left: 5px;
+}
+.notifMsg {
+  position: absolute;
+    top: -3px;
+    left: -6px;
+    padding: 0px 7px;
+    border-radius: 50%;
+    background-color: brown;
+    color: #fff;
+    font-size: 13px;
+}
+.notifMsg:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.notifMsg span {
+  color: #fff;
+}
+
+.msgNotifConnected {
+  float: right;
+  display: block;
+  margin-right: 0;
+  margin: 20px 0px;
+  font-size: 18px;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 3px 8px;
+  color: #336cfb;
+}
+
+.lu1{
+ background-color: #eee;
+}
+
+.lu1 a, .lu0 a,.lu1 a:hover, .lu0 a:hover{
+  color: #1f2022;
+ }
+ .modal-dialog {
+  top: 50%;
+  transform: translateY(-50%) !important;
+ }
+ .contentOrdonance {
+   width: 100%;
+   min-height: 720px;
+   background-size: cover;
+   padding-top: 300px;
+ } 
+
+ .cardmenuMedecin {
+  margin-bottom: 15px;
+  width: 30%;
+  float: left;
+}
+ .cardcontentMedecin {
+  margin-bottom: 15px;
+  width: 69%;
+  float: left;
+  margin-left: 1%;
+  padding: 15px;
+}
+
+.tableMsg button{
+  background: none;
+  border: none;
+}
+.ligneReservation {
+  width: 100%;
+  padding: 5px 0px;
+  border-bottom: 1px #eee solid;
+  overflow: hidden;
+}
+.nomPatientReservation, .dateReservation, .ligneReservation .heureReservation, .detailPatient, .ValiderReservation {
+  float: left;
+  width: 19%;
+  text-align: center;
+  background: none;
+}
+.nomPatientReservation span, .dateReservation span, .heureReservation span, .detailPatient span, .ValiderReservation span {
+  margin-left: 3px;
+}
+.dateReservation {
+  float: left;
+  margin: 0 3px;
+  border: none;
+  padding: 10px;
   text-align: center;
 }
+.nomPatientReservation {
+  padding: 10px;
+  margin: 0 3px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.detailPatient, .ValiderReservation {
+  background: none;
+  border: 1px #eee solid;
+  width: 19%;
+  margin: 0 0.5%;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ligneDetailPopup {
+  padding: 5px 0px;
+  border-bottom: 1px #eee solid;
+  margin-bottom: 2px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ligneDetailPopup span{
+  font-weight: bold;
 }
-
-.App-link {
-  color: #61dafb;
+.headerMedecin, .contHeaderPatient {
+  background: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerMedecin .header2 {
+  height: 50px;
+}
+.headerMedecin .menuHaut {
+  overflow: hidden;
+}
+.cardmenuMedecin button.active {
+  border-bottom:2px  #2b5de0 solid;
+  color: #2b5de0;
+}
+.cardmenuMedecin button{
+  border-radius: 0;
+}
+.contCardConsult{
+  padding: 15px;
+}
+.contBttConsult {
+  float: left;
+}
+.bttConsult {
+  background: none;
+  border: 1px #eee solid;
+  width: 100%;
+  margin: 0 0.5%;
+  padding: 10px;
+}
+.bttConsult span{
+  margin-left: 7px;
+}
+.contficheP {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px #eee solid;
+}
+.lienMenuMedecin {
+  padding: 11px 10px;
+    text-align: center;
+    display: block;
+    float: left;
+    color: #000;
+    font-size: 18px;
+}
+.lienMenuMedecin:hover {
+  color:#2b5de0;
+  text-decoration: none;
+}
+.textAreaOrdo {
+  width: 100%;
+  min-height: 100px;
+}
+.conthomeD {
+  background: #fff;
+    border-radius: 7px;
 }
